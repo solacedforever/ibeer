@@ -75,8 +75,8 @@ main {
   padding: 20px;
   background-color: #444;
   box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3);
-  width: 600px;
-  display: flex;
+  display:flex;
+  flex-basis:55%;
   flex-direction: column;
   position: relative;
   top: -50px;
@@ -86,7 +86,7 @@ aside {
   padding: 20px;
   background-color: #eee;
   box-shadow: 5px 5px 8px rgba( 0, 0, 0, 0.3);
-  width: 200px;
+  flex-basis:20%;
   position: relative;
   top: -50px;
 }
