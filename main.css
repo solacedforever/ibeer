@@ -1,210 +1,149 @@
-/*
+body {
+  font-family: 'Noto Serif', serif;
+  line-height: 1.8;
+  margin: 0;
+  background-color: #eeebda;
+}
 
-FONTS:
+h1, h2, h3 {
+  font-family: "Josefin Sans", sans-serif;
+  margin-top: 0;
+}
 
-'Josefin Sans'
-'Noto Serif'
-'Dancing Script'
+img {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
 
-COLORS:
+.wrapper {
+  width: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
 
-light tan: #eeebda
+#site-header {}
 
-*/
-body{
-    font-family: 'Noto Serif', serif;
-    line-height: 1.8;
-    margin: 0;
-    background-color: #eeebda;
+#site-header div {
+  text-align: center;
+  padding: 60px 0 120px 0;
+  font-size: 4em;
+  background-image: url("./img/header-img.jpg");
+  background-size: cover;
+  background-position: right bottom;
 }
-h1, h2, h3{
-    font-family: "Josefin Sans", sans-serif;
-    margin-top: 0;
-}
-img{
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-    display: block;
-}
-.wrapper{
 
-    width: 1000px;
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    margin:0 auto;
-/*
-        TODO:
-        - Center up the page
-        - Create a flexbox containerer for
-        the major page sections
-    */
+#site-header div h1, #site-header div h3 {
+  margin: 0;
+  line-height: 1;
+  position: relative;
 }
-#site-header{
 
+#site-header div h1 {
+  top: 20px;
+}
 
-    /*
-        TODO
-        - Flexbox property here
-    */
+#site-header div h3 {
+  color: white;
+  bottom: 20px;
+  text-shadow: 0 5px 8px rgba( 0, 0, 0, 0.3);
+  font-family: 'Dancing Script'
 }
-#site-header div{
-    text-align: center;
-    padding: 60px 0 120px 0;
-    font-size: 4em;
-    background-image:url("./img/header-img.jpg");
 
-    /*
-        TODO:
-        - Add a background image "header-img.jpg"
-        make sure that the path to the image is correct
-    */
+#main-navigation {
+  background: #444;
+  display: flex;
+  flex-direction: row;
+}
 
-    background-size: cover;
-    background-position: right bottom;
+#main-navigation a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
 }
-#site-header div h1,
-#site-header div h3{
-    margin: 0;
-    line-height: 1;
-    position: relative;
-}
-#site-header div h1{
-    top: 20px;
-}
-#site-header div h3{
-    color: white;
-    bottom: 20px;
-    text-shadow: 0 5px 8px rgba( 0, 0, 0, 0.3 );
-    font-family:'Dancing Script'
-    /*
-        TODO:
-        - Use the script font: 'Dancing Script' fot this text
-    */
-}
-#main-navigation{
-    background: #444;
-    display:flex;
-    flex-direction:row;
 
-    /*
-        TODO:
-        - Use Flexbox to arrange the navigation links
-    */
+#main-navigation #logo {
+  margin-right: 400px;
 }
-#main-navigation a{
-    display: block;
-    color: white;
-    text-decoration: none;
-    text-transform: uppercase;
-    padding: 10px 20px;
 
-    /*
-        TODO:
-        - Flexbox - Create general spacing between nav links
-    */
+main {
+  padding: 20px;
+  background-color: #444;
+  box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3);
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -50px;
 }
-#main-navigation #logo{
-    margin-right: 400px;
 
-    /*
-        TODO:
-        - Flexbox - The logo needs to take up more space
-        that the other links
-    */
+aside {
+  padding: 20px;
+  background-color: #eee;
+  box-shadow: 5px 5px 8px rgba( 0, 0, 0, 0.3);
+  width: 200px;
+  position: relative;
+  top: -50px;
 }
-main{
-    padding: 20px;
-    background-color: #444;
-    box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
-    width:600px;
-    display:flex;
-    flex-direction:column;
-    position:relative;
-    top:-50px;
 
-    /*
-        TODO:
-        - Flexbox: Set the starting width of this element
-        - Use relative positioning to bump this upward
-    */
+aside h3 {
+  text-align: center;
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #ccc;
 }
-aside{
-    padding: 20px;
-    background-color: #eee;
-    box-shadow: 5px 5px 8px rgba( 0, 0, 0, 0.3 );
-    width:200px;
-    position:relative;
-    top:-50px;
-    /*
-        TODO:
-        - Flexbox: Set the starting width of this element
-        - Use relative positioning to bump this upward
-    */
-}
-aside h3{
-    text-align: center;
-    margin: 0 0 10px 0;
-    padding: 0 0 10px 0;
-    border-bottom: 1px solid #ccc;
-}
-aside img{
-    border-radius: 50%;
-    margin-bottom: 30px;
-    border: 2px solid white;
-}
-article{
-    background-color: white;
-    box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3 );
-    padding: 20px;
-    margin-bottom: 20px;
-}
-article h2{
-    line-height: 1em;
-    font-weight: bold;
-    text-align: center;
-    margin: 0 0 10px 0;
-    padding: 0 0 10px 0;
-    border-bottom: 1px solid #ccc;
-    text-transform: uppercase;
-}
-article time{
-    font-size: 0.8em;
-    text-align: center;
-    display: block;
-    margin-bottom: 30px;
-    color: #666;
-}
-article img{
-  float:right;
-  width:40%;
 
-    /*
-        TODO:
-        - Float article images to the right
-        and match sizes and spacing to the mockup
-    */
+aside img {
+  border-radius: 50%;
+  margin-bottom: 30px;
+  border: 2px solid white;
 }
-article footer p{
+
+article {
+  background-color: white;
+  box-shadow: -5px 5px 8px rgba( 0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+article h2 {
+  line-height: 1em;
+  font-weight: bold;
+  text-align: center;
+  margin: 0 0 10px 0;
+  padding: 0 0 10px 0;
+  border-bottom: 1px solid #ccc;
+  text-transform: uppercase;
+}
+
+article time {
+  font-size: 0.8em;
+  text-align: center;
+  display: block;
+  margin-bottom: 30px;
+  color: #666;
+}
+
+article img {
+  float: right;
+  width: 40%;
+}
+
+article footer p {
   background-color: white;
   margin-bottom: 20px;
-  text-align:center;
-  font-family:"NotoSerif";
-
-    /*
-        TODO:
-        - Style the article footer
-        HINT: Look to the article header;
-    */
+  text-align: center;
+  font-family: "NotoSerif";
 }
-#site-footer{
-    color:white;
-    background: #333;
-    text-align:center;
-    font-family:monospace;
-    /*
-        TODO:
-        - Style the site footer
-    */
+
+#site-footer {
+  color: white;
+  background: #333;
+  text-align: center;
+  font-family: monospace;
 }
